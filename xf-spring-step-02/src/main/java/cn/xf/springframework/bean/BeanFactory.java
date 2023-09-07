@@ -9,5 +9,5 @@ import cn.xf.springframework.bean.pojo.BeanDeifition;
 
 public interface BeanFactory {
 
-    public BeanDeifition getBean(String name);
+    public Object getBean(String name);
 }
