@@ -1,5 +1,6 @@
 import cn.xf.springframework.bean.pojo.BeanDeifition;
 import cn.xf.springframework.bean.support.DefaultListableBeanFactory;
+import org.junit.Test;
 
 /**
  * @author xiongfeng
@@ -8,7 +9,8 @@ import cn.xf.springframework.bean.support.DefaultListableBeanFactory;
 
 public class ApiTest {
 
-    public static void main(String[] args) {
+    @Test
+    public void beanTest() {
 
         // 1.初始化 BeanFactory
         DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
