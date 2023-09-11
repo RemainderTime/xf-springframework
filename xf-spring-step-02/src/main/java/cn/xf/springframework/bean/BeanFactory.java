@@ -9,7 +9,7 @@ import cn.xf.springframework.bean.pojo.BeanDeifition;
 
 public interface BeanFactory {
 
-    public Object getBean(String name);
+//    public Object getBean(String name);
 
     public Object getBean(String beanName, Object... args);
 }
