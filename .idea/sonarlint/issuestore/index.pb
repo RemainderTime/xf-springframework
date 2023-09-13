@@ -78,3 +78,9 @@ bxf-spring-step-02/src/main/java/cn/xf/springframework/bean/support/DefaultLista
 ^xf-spring-step-02/src/main/java/cn/xf/springframework/bean/support/BeanDefinitionRegister.java,8\e\8e9adff9755cd561efcacfd19a8bc50b6627238e
 É
 Sxf-spring-step-02/src/main/java/cn/xf/springframework/bean/pojo/PropertyValues.java,8\f\8fd5723c451e1daed5c4bcf10e23a59ca78605e4
+ç
+]xf-spring-step-02/src/main/java/cn/xf/springframework/bean/support/SingletonBeanRegister.java,6\7\67f1a3ee6185317229952382a23183198343d56d
+ì
+cxf-spring-step-02/src/main/java/cn/xf/springframework/bean/support/DefaultSingletonBeanFactory.java,4\0\409240b699dc13d7d54771b739c7705d4e1a58f7
+\
+,xf-spring-step-02/src/test/java/UserDao.java,b\9\b99e76b56f385c6edfe1e236a2accaeb49e55086

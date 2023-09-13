@@ -7,13 +7,27 @@ import org.junit.runner.RunWith;
  */
 public class UserService {
 
-    private String name;
+    private String uId;
 
-    public UserService(String name) {
-        this.name = name;
+    private UserDao userDao;
+
+    public void queryUserInfo() {
+        System.out.println("查询用户信息：" + userDao.queryUserName(uId));
     }
 
-    public void getUserInfo() {
-        System.out.println("成功打印用户信息");
+    public String getuId() {
+        return uId;
+    }
+
+    public void setuId(String uId) {
+        this.uId = uId;
+    }
+
+    public UserDao getUserDao() {
+        return userDao;
+    }
+
+    public void setUserDao(UserDao userDao) {
+        this.userDao = userDao;
     }
 }

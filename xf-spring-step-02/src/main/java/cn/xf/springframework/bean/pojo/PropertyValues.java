@@ -14,7 +14,7 @@ public class PropertyValues {
     private List<PropertyValue> propertyValues =new ArrayList<>();
 
 
-    private void addPropertyValue(PropertyValue pv){
+    public void addPropertyValue(PropertyValue pv){
         this.propertyValues.add(pv);
     }
 
@@ -32,7 +32,4 @@ public class PropertyValues {
         return propertyValues;
     }
 
-    public void setPropertyValues(List<PropertyValue> propertyValues) {
-        this.propertyValues = propertyValues;
-    }
 }

@@ -1,7 +1,11 @@
 package cn.xf.springframework.bean.support;
 
 import cn.hutool.core.bean.BeanUtil;
+import cn.hutool.core.collection.CollUtil;
+import cn.hutool.core.convert.Convert;
 import cn.hutool.core.date.DateTime;
+import cn.hutool.core.util.ArrayUtil;
+import cn.hutool.core.util.ReflectUtil;
 import cn.xf.springframework.bean.pojo.BeanDeifition;
 import cn.xf.springframework.bean.pojo.BeanReference;
 import cn.xf.springframework.bean.pojo.PropertyValue;
@@ -9,7 +13,11 @@ import cn.xf.springframework.bean.pojo.PropertyValues;
 import cn.xf.springframework.bean.strategy.CglibInstantiationStrategy;
 import cn.xf.springframework.bean.strategy.InstantiationStrategy;
 
+import java.lang.reflect.Array;
 import java.lang.reflect.Constructor;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.logging.Logger;
 
@@ -61,12 +69,14 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
                     BeanReference valueReference = (BeanReference) value;
                     value = getBean(valueReference.getBeanName());
                 }
+                System.out.println();
                 BeanUtil.setFieldValue(bean, name, value);
             }
 
         } catch (Exception e) {
             throw new RuntimeException("create constructor bean error " + beanName, e);
         }
-
     }
+
+
 }
