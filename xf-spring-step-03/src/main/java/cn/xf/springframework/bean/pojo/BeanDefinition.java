@@ -5,18 +5,18 @@ package cn.xf.springframework.bean.pojo;
  * @date 2023/9/6 17:59
  */
 
-public class BeanDeifition {
+public class BeanDefinition {
 
     private Class beanClass;
 
     private PropertyValues propertyValues;
 
-    public BeanDeifition(Class beanClass) {
+    public BeanDefinition(Class beanClass) {
         this.beanClass = beanClass;
         this.propertyValues = new PropertyValues();
     }
 
-    public BeanDeifition(Class beanClass, PropertyValues propertyValues) {
+    public BeanDefinition(Class beanClass, PropertyValues propertyValues) {
         this.beanClass = beanClass;
         this.propertyValues = propertyValues != null ? propertyValues : new PropertyValues();
     }

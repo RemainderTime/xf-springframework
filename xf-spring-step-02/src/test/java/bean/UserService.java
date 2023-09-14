@@ -1,5 +1,4 @@
-import org.junit.Test;
-import org.junit.runner.RunWith;
+package bean;
 
 /**
  * @author xiongfeng
