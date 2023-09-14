@@ -74,40 +74,11 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
                     value = getBean(beanReference.getBeanName());
                 }
                 // 属性填充
-//                BeanUtil.setFieldValue(bean, name, value);
-                setFieldValue(bean, name, value);
+                BeanUtil.setFieldValue(bean, name, value);
             }
         } catch (Exception e) {
             throw new RuntimeException("create constructor bean error " + beanName, e);
         }
     }
-
-    public static void setFieldValue(Object bean, String fieldNameOrIndex, Object value) {
-        if (bean instanceof Map) {
-            ((Map) bean).put(fieldNameOrIndex, value);
-        } else if (bean instanceof List) {
-            CollUtil.setOrAppend((List) bean, Convert.toInt(fieldNameOrIndex), value);
-        } else if (ArrayUtil.isArray(bean)) {
-            ArrayUtil.setOrAppend(bean, Convert.toInt(fieldNameOrIndex), value);
-        } else {
-            // 普通Bean对象
-            ReflectUtil.setFieldValue(bean, fieldNameOrIndex, value);
-        }
-    }
-
-    public static Object setOrAppend(Object array, int index, Object value) {
-//        if (index < length(array)) {
-//            Array.set(array, index, value);
-//            return array;
-//        } else {
-//            return append(array, value);
-//        }
-        return null;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(Convert.toInt("userDao"));
-    }
-
 
 }
